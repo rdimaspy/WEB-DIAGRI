@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIAGRI - PT. Distribusi Agrikultur Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        diagriDark: '#124620',
+                        diagriGold: '#af9c38',
+                        diagriGreen: '#607f4a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+    <!-- Navbar Putih dengan Logo Ikon -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            
+            <!-- Group Logo: Ikon + Teks -->
+            <div class="flex items-center gap-3">
+                <img src="logokcl1.png" class="h-10 w-auto object-contain" alt="Ikon DIAGRI">
+                <div class="text-3xl font-black tracking-tighter">
+                    <span class="text-diagriDark">DIA</span><span class="text-diagriGold">GRI</span>
+                </div>
+            </div>
+
+            <!-- Menu Navigasi (Kembali ke Hijau Tua agar terbaca di bg putih) -->
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
+                <a href="#beranda" class="text-diagriDark hover:text-diagriGold transition">Beranda</a>
+                <a href="#ecommerce" class="text-diagriDark hover:text-diagriGold transition">E-Commerce</a>
+                <a href="#visi-misi" class="text-diagriDark hover:text-diagriGold transition">Visi & Misi</a>
+                <a href="#layanan" class="text-diagriDark hover:text-diagriGold transition">Layanan</a>
+                <a href="#struktur" class="text-diagriDark hover:text-diagriGold transition">Struktur</a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <div class="md:hidden text-diagriDark text-2xl">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Section Logo (Identitas Utama) -->
+    <section class="pt-36 pb-20 bg-white border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <!-- Container Logo - Ukuran Diperbesar -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 mb-16">
+                
+                <!-- Logo Perusahaan (Kiri) -->
+                <div class="flex flex-col items-center">
+                    <!-- Ukuran h-48 w-48 (sekitar 192px) untuk tampilan lebih besar -->
+                    <div class="h-48 w-48 md:h-56 md:w-56 flex items-center justify-center">
+                        <img src="logopt.png" class="max-h-full max-w-full object-contain transform hover:scale-105 transition duration-500" alt="Logo PT DIAGRI">
+                    </div>
+                    <p class="mt-6 text-[12px] font-black text-diagriDark tracking-[0.4em] uppercase">Corporate Identity</p>
+                </div>
+                
+                <!-- Garis Pemisah Super Bold -->
+                <div class="hidden md:block h-40 w-[4px] bg-diagriDark/20 rounded-full"></div>
+                <!-- Garis Pemisah Mobile -->
+                <div class="md:hidden w-32 h-[4px] bg-diagriDark/20 rounded-full my-8"></div>
+
+                <!-- Logo E-Commerce (Kanan) -->
+                <div class="flex flex-col items-center">
+                    <!-- Ukuran disamakan agar simetris -->
+                    <div class="h-48 w-48 md:h-56 md:w-56 flex items-center justify-center">
+                        <img src="logoecommerce.png" class="max-h-full max-w-full object-contain transform hover:scale-105 transition duration-500" alt="Logo E-Commerce">
+                    </div>
+                    <p class="mt-6 text-[12px] font-black text-diagriGold tracking-[0.4em] uppercase">Platform Digital</p>
+                </div>
+            </div>
+            
+            <!-- Slogan Pure Tulisan - Ukuran Diperbesar -->
+            <div class="mt-10">
+                <h2 class="text-3xl md:text-5xl font-extrabold italic tracking-tighter leading-tight">
+                    <span class="text-diagriDark">"Distribusi Cerdas,</span>
+                    <br class="md:hidden"> <!-- Pindah baris di mobile supaya rapi -->
+                    <span class="text-diagriGold">Tanpa Batas Pasar"</span>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Pengenalan Perusahaan -->
+    <section id="beranda" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            
+            <!-- Kolom Teks -->
+            <div class="md:w-1/2">
+                <h3 class="text-diagriGold font-bold tracking-widest uppercase text-sm mb-4">Tentang Kami</h3>
+                <h1 class="text-4xl font-extrabold text-diagriDark leading-tight mb-6">
+                    PT. Distribusi Agrikultur Indonesia
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed text-justify">
+                    DIAGRI adalah pionir dalam transformasi distribusi agrikultur di Indonesia. Kami memanfaatkan teknologi digital untuk menyederhanakan alur kerja dari hulu ke hilir, memastikan setiap pelaku agrikultur mendapatkan nilai terbaik melalui ekosistem yang transparan dan terpadu.
+                </p>
+            </div>
+
+            <!-- Kolom Foto: Gaya Modern Box -->
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative group">
+                    <!-- Dekorasi Aksen di Belakang Foto -->
+                    <div class="absolute -top-4 -right-4 w-full h-full border-2 border-diagriGold rounded-3xl z-0 group-hover:top-0 group-hover:right-0 transition-all duration-500"></div>
+                    
+                    <!-- Container Foto -->
+                    <div class="relative z-10 overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-4 border-white">
+                        <img src="ilustrasi1.png" 
+                            class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700" 
+                            alt="Ilustrasi Teknologi Agrikultur">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section E-Commerce dengan Foto Bulat -->
+    <section id="ecommerce" class="py-20 bg-diagriDark text-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row-reverse items-center gap-16">
+            
+            <!-- Kolom Teks -->
+            <div class="md:w-1/2">
+                <h3 class="text-diagriGold font-bold tracking-widest uppercase text-sm mb-4">Platform Kami</h3>
+                <h2 class="text-3xl font-bold mb-6">Efisiensi Distribusi Digital</h2>
+                <p class="text-gray-300 text-lg leading-relaxed mb-8 text-justify">
+                    Melalui integrasi e-commerce, kami memangkas rantai distribusi yang tidak efisien. Platform kami memungkinkan petani untuk memasarkan produknya secara luas tanpa hambatan geografis, sementara konsumen mendapatkan kepastian kualitas dan harga yang adil.
+                </p>
+                <div class="bg-diagriGreen/20 p-6 rounded-2xl border-l-4 border-diagriGold">
+                    <p class="italic text-gray-200">"Membangun komunitas agrikultur yang mendukung keberlanjatur sektor pangan di Indonesia."</p>
+                </div>
+            </div>
+
+            <!-- Kolom Foto: Sekarang Bulat Sempurna -->
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative group">
+                    <!-- Border Lingkaran Luar -->
+                    <div class="absolute -inset-2 bg-gradient-to-tr from-diagriGold to-diagriGreen rounded-full opacity-50 blur-sm group-hover:opacity-100 transition duration-500"></div>
+                    
+                    <!-- Container Foto Bulat -->
+                    <div class="relative w-80 h-80 md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-8 border-white/10 shadow-2xl">
+                        <img src="ilustrasi2.png" 
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-700" 
+                            alt="Ilustrasi Platform">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 3: Visi & Misi (Full Points) -->
+    <section id="visi-misi" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100">
+                    <h3 class="text-2xl font-bold text-diagriDark mb-6 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-diagriGreen text-white rounded-lg flex items-center justify-center italic">V</span> Visi Perusahaan
+                    </h3>
+                    <ul class="space-y-4 text-sm text-gray-600">
+                        <li class="flex items-start gap-3"><i class="fas fa-circle text-[8px] mt-1.5 text-diagriGold"></i> Mewujudkan sistem distribusi pertanian yang efisien, terintegrasi, dan berkelanjutan.</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-circle text-[8px] mt-1.5 text-diagriGold"></i> Menghubungkan seluruh pelaku agrikultur dalam satu ekosistem digital yang terpadu.</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-circle text-[8px] mt-1.5 text-diagriGold"></i> Memperluas akses pasar bagi produk pertanian secara merata di tingkat nasional.</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-circle text-[8px] mt-1.5 text-diagriGold"></i> Mendorong modernisasi sektor agrikultur melalui pemanfaatan teknologi.</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-circle text-[8px] mt-1.5 text-diagriGold"></i> Menjadi penggerak utama dalam transformasi distribusi hasil pertanian berbasis digital.</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100">
+                    <h3 class="text-2xl font-bold text-diagriDark mb-6 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-diagriGold text-white rounded-lg flex items-center justify-center italic">M</span> Misi Perusahaan
+                    </h3>
+                    <div class="grid gap-4 text-xs">
+                        <p class="p-3 bg-white rounded shadow-sm"><strong>1. Platform Andal:</strong> Mengembangkan e-commerce agrikultur yang aman dan mudah diakses.</p>
+                        <p class="p-3 bg-white rounded shadow-sm"><strong>2. Optimasi Distribusi:</strong> Memastikan efisiensi alur dari produsen ke konsumen.</p>
+                        <p class="p-3 bg-white rounded shadow-sm"><strong>3. Kemitraan:</strong> Memperkuat jaringan dengan pelaku agrikultur wilayah.</p>
+                        <p class="p-3 bg-white rounded shadow-sm"><strong>4. Transparansi:</strong> Menyediakan sistem transaksi yang cepat dan terintegrasi.</p>
+                        <p class="p-3 bg-white rounded shadow-sm"><strong>5. Konektivitas:</strong> Memanfaatkan teknologi digital untuk jangkauan pasar.</p>
+                        <p class="p-3 bg-white rounded shadow-sm"><strong>6. Responsif:</strong> Layanan yang berorientasi pada kepuasan pengguna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Layanan & Keunggulan -->
+    <section id="layanan" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-diagriGold mb-16 uppercase tracking-widest">Layanan & Keunggulan</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
+                    <span class="text-4xl">🌾</span>
+                    <h4 class="font-bold text-diagriDark my-4">Akses Pasar Langsung</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Menghubungkan petani langsung dengan konsumen, meningkatkan margin keuntungan.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
+                    <span class="text-4xl">📦</span>
+                    <h4 class="font-bold text-diagriDark my-4">Distribusi Efisien</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Sistem logistik terintegrasi untuk pengiriman produk dalam kondisi tetap segar.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
+                    <span class="text-4xl">💰</span>
+                    <h4 class="font-bold text-diagriDark my-4">Harga Transparan</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Platform digital dengan informasi harga pasar real-time yang jujur bagi semua pihak.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
+                    <span class="text-4xl">🛒</span>
+                    <h4 class="font-bold text-diagriDark my-4">E-Commerce Terintegrasi</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Belanja produk pertanian lokal dengan mudah melalui platform digital terpadu.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
+                    <span class="text-4xl">📊</span>
+                    <h4 class="font-bold text-diagriDark my-4">Analitik & Wawasan</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Membantu pengambilan keputusan bisnis yang cerdas berdasarkan tren pasar.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
+                    <span class="text-4xl">🌱</span>
+                    <h4 class="font-bold text-diagriDark my-4">Praktik Berkelanjutan</h4>
+                    <p class="text-xs text-gray-500 leading-relaxed">Fokus pada keberlanjutan sektor pangan dan modernisasi pertanian ramah lingkungan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Struktur Organisasi (Hierarki Visual) -->
+    <section id="struktur" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-diagriGold mb-20 uppercase tracking-widest">Struktur Organisasi</h2>
+            
+            <div class="flex justify-center mb-20 relative">
+                <div class="w-64 z-10">
+                    <div class="w-24 h-24 bg-diagriDark text-white rounded-full mx-auto flex items-center justify-center text-3xl font-bold mb-4 shadow-xl border-4 border-white">AR</div>
+                    <h5 class="text-xl font-bold text-diagriDark">Abdul Rossyd L</h5>
+                    <p class="text-diagriGold font-bold text-xs uppercase tracking-widest">CEO</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div class="group">
+                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">KN</div>
+                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Kevin Nicola N.O.</h6>
+                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Pemasaran</p>
+                </div>
+                <div class="group">
+                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">AR</div>
+                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Arjuna Rafif S.A.</h6>
+                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Keuangan</p>
+                </div>
+                <div class="group">
+                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">AW</div>
+                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Aryo Winata</h6>
+                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. SDM (HRD)</p>
+                </div>
+                <div class="group">
+                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">RD</div>
+                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Rifqy Dimas P.</h6>
+                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Operasional</p>
+                </div>
+                <div class="group">
+                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">MR</div>
+                    <h6 class="text-sm font-bold text-diagriDark leading-tight">M. Rizieq Reyvito</h6>
+                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Teknologi (CTO)</p>
+                </div>
+                <div class="group">
+                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">AY</div>
+                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Alfemmas Yulianto</h6>
+                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Logistik & Distribusi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Kontrak -->
+    <footer id="kontak" class="bg-diagriDark text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Main Footer Content: Gap dikurangi agar Sosmed bergeser ke kiri -->
+            <div class="flex flex-col md:flex-row justify-start gap-12 md:gap-10 border-b border-white/10 pb-12">
+                
+                <!-- Kolom 1: Brand (Geser kanan dengan md:pl-12) -->
+                <div class="md:w-1/4 md:pl-12">
+                    <div class="text-4xl font-black tracking-tighter mb-6"
+                        style="-webkit-text-stroke: 0.8px white;">
+                        <span class="text-diagriGreen">DIA</span><span class="text-diagriGold">GRI</span>
+                    </div>
+                    <p class="text-gray-400 text-sm italic">
+                        "Menjadi penggerak utama dalam transformasi distribusi hasil pertanian berbasis digital di Indonesia."
+                    </p>
+                </div>
+
+                <!-- Kolom 2: Alamat -->
+                <div class="md:w-1/4 md:pl-6 space-y-4">
+                    <h4 class="text-diagriGold font-bold uppercase tracking-widest text-sm">Alamat Kantor</h4>
+                    <p class="text-sm text-gray-300">
+                        Bakrie Tower Lantai 12, Rasuna Epicentrum,<br>
+                        Jl. H.R. Rasuna Said, Jakarta Selatan, 12940
+                    </p>
+                </div>
+
+                <!-- Kolom 3: Kontak -->
+                <div class="md:w-1/5 md:pl-4 space-y-4">
+                    <h4 class="text-diagriGold font-bold uppercase tracking-widest text-sm">Kontak</h4>
+                    <div class="space-y-2">
+                        <p class="text-sm text-gray-300 flex items-center gap-2">
+                            <i class="fas fa-envelope text-diagriGold"></i>
+                            diagri.hub@ptdiagri.co.id
+                        </p>
+                        <p class="text-sm text-gray-300 flex items-center gap-2">
+                            <i class="fas fa-phone-alt text-diagriGold"></i>
+                            021 13130506
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kolom 4: Social Media (Sekarang lebih dekat ke kolom Kontak) -->
+                <div class="flex flex-col items-start md:pl-4">
+                    <h4 class="text-diagriGold font-bold uppercase tracking-widest text-sm mb-6">Social Media</h4>
+                    <div class="space-y-4">
+                        <a href="#" class="flex items-center gap-3 group hover:text-diagriGold transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                            <span class="text-xs font-medium opacity-80 group-hover:opacity-100">diagri.official</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-3 group hover:text-diagriGold transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                            <span class="text-xs font-medium opacity-80 group-hover:opacity-100">diagri.official</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-3 group hover:text-diagriGold transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                            <span class="text-xs font-medium opacity-80 group-hover:opacity-100">diagri.official</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center mt-12 text-[10px] text-gray-500 uppercase tracking-[0.3em]">
+                &copy; 2026 PT. Distribusi Agrikultur Indonesia.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
