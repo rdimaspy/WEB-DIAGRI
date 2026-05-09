@@ -23,59 +23,39 @@
 <body class="bg-white text-gray-800 font-sans">
 
     <!-- Navbar Putih dengan Logo Ikon -->
-    <nav class="fixed w-full z-[100] bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-        <div class="flex items-center gap-3 relative z-[110]">
-            <img src="logokcl1.png" class="h-8 md:h-10 w-auto object-contain" alt="Ikon DIAGRI">
-            <div class="text-2xl md:text-3xl font-black tracking-tighter">
-                <span class="text-diagriDark">DIA</span><span class="text-diagriGold">GRI</span>
+    <nav class="fixed w-full z-50 bg-white shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            
+            <div class="flex items-center gap-3">
+                <img src="logokcl1.png" class="h-10 w-auto object-contain" alt="Ikon DIAGRI">
+                <div class="text-2xl md:text-3xl font-black tracking-tighter">
+                    <span class="text-diagriDark">DIA</span><span class="text-diagriGold">GRI</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
+                <a href="#beranda" class="text-diagriDark hover:text-diagriGold transition">Beranda</a>
+                <a href="#ecommerce" class="text-diagriDark hover:text-diagriGold transition">E-Commerce</a>
+                <a href="#visi-misi" class="text-diagriDark hover:text-diagriGold transition">Visi & Misi</a>
+                <a href="#layanan" class="text-diagriDark hover:text-diagriGold transition">Layanan</a>
+                <a href="#struktur" class="text-diagriDark hover:text-diagriGold transition">Struktur</a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden text-diagriDark text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-y-0 right-0 w-64 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-[60]">
+            <div class="flex flex-col p-8 space-y-6 text-sm font-bold uppercase tracking-widest">
+                <a href="#beranda" class="mobile-link text-diagriDark border-b border-gray-100 pb-2">Beranda</a>
+                <a href="#ecommerce" class="mobile-link text-diagriDark border-b border-gray-100 pb-2">E-Commerce</a>
+                <a href="#visi-misi" class="mobile-link text-diagriDark border-b border-gray-100 pb-2">Visi & Misi</a>
+                <a href="#layanan" class="mobile-link text-diagriDark border-b border-gray-100 pb-2">Layanan</a>
+                <a href="#struktur" class="mobile-link text-diagriDark border-b border-gray-100 pb-2">Struktur</a>
             </div>
         </div>
-
-        <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
-            <a href="#beranda" class="text-diagriDark hover:text-diagriGold transition">Beranda</a>
-            <a href="#ecommerce" class="text-diagriDark hover:text-diagriGold transition">E-Commerce</a>
-            <a href="#visi-misi" class="text-diagriDark hover:text-diagriGold transition">Visi & Misi</a>
-            <a href="#layanan" class="text-diagriDark hover:text-diagriGold transition">Layanan</a>
-            <a href="#struktur" class="text-diagriDark hover:text-diagriGold transition">Struktur</a>
-        </div>
-
-        <button id="menu-btn" class="md:hidden text-diagriDark text-2xl focus:outline-none relative z-[110]">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <div id="mobile-menu" class="fixed inset-0 bg-white translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center justify-center space-y-8 text-xl font-bold uppercase tracking-widest z-[100]">
-            <a href="#beranda" class="mobile-link text-diagriDark">Beranda</a>
-            <a href="#ecommerce" class="mobile-link text-diagriDark">E-Commerce</a>
-            <a href="#visi-misi" class="mobile-link text-diagriDark">Visi & Misi</a>
-            <a href="#layanan" class="mobile-link text-diagriDark">Layanan</a>
-            <a href="#struktur" class="mobile-link text-diagriDark">Struktur</a>
-        </div>
-    </div>
-</nav>
-
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('translate-x-full');
-        // Ganti ikon bars jadi X saat terbuka
-        const icon = menuBtn.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-    });
-
-    // Tutup menu saat link diklik
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-            menuBtn.querySelector('i').classList.add('fa-bars');
-            menuBtn.querySelector('i').classList.remove('fa-times');
-        });
-    });
-</script>
+    </nav>
 
     <section class="snap-start min-h-screen md:h-screen flex items-center bg-white relative overflow-hidden pt-20 md:pt-0">
         
@@ -286,75 +266,75 @@
     </section>
 
     <!-- Section 5: Struktur Organisasi (Executive Edition) -->
-    <section id="struktur" class="snap-start h-screen flex items-center py-24 px-6 bg-white relative overflow-hidden">
-        
-        <!-- Background Aksen Mewah -->
+    <section id="struktur" class="snap-start min-h-screen flex items-center py-24 md:py-32 px-6 bg-white relative overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-diagriGold/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div class="max-w-7xl mx-auto text-center relative z-10">
-            <h2 class="text-3xl font-bold text-diagriGold mb-20 uppercase tracking-[0.3em]">Struktur Organisasi</h2>
+        <div class="max-w-7xl mx-auto text-center relative z-10 w-full">
+            <h2 class="text-2xl md:text-3xl font-bold text-diagriGold mb-16 md:mb-24 uppercase tracking-[0.3em]">
+                Struktur Organisasi
+            </h2>
             
-            <!-- CEO Section dengan Glow Emas -->
-            <div class="flex justify-center mb-24 relative">
-
+            <div class="flex justify-center mb-16 md:mb-24 relative">
                 <div class="w-64 group">
                     <div class="relative w-28 h-28 mx-auto mb-6">
-                        <!-- Outer Ring Animation -->
                         <div class="absolute inset-0 rounded-full border-2 border-diagriGold scale-110 opacity-20 group-hover:scale-125 group-hover:opacity-0 transition duration-700"></div>
-                        
-                        <div class="w-full h-full bg-diagriDark text-diagriGold rounded-full flex items-center justify-center text-3xl font-serif italic shadow-[0_15px_35px_rgba(26,46,24,0.3)] border-2 border-diagriGold relative z-10 transition-transform duration-500 group-hover:scale-105">
+                        <div class="w-full h-full bg-diagriDark text-diagriGold rounded-full flex items-center justify-center text-3xl font-serif italic shadow-[0_15px_35px_rgba(26,46,24,0.3)] border-2 border-diagriGold relative z-10">
                             AR
                         </div>
                     </div>
-                    <h5 class="text-2xl font-bold text-diagriDark tracking-tight">Abdul Rossyd L</h5>
+                    <h5 class="text-xl md:text-2xl font-bold text-diagriDark tracking-tight">Abdul Rossyd L</h5>
                     <div class="inline-block px-4 py-1 mt-2 border-y border-diagriGold/30">
-                        <p class="text-diagriGold font-black text-xs uppercase tracking-[0.2em]">Chief Executive Officer</p>
+                        <p class="text-diagriGold font-black text-[10px] md:text-xs uppercase tracking-[0.2em]">Chief Executive Officer</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Directors Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-12">
-                <!-- Card Template -->
-                <div class="group relative">
-                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500 overflow-hidden relative">
-                        <!-- Subtle Glass Effect Overlay -->
-                        <div class="absolute inset-0 bg-gradient-to-tr from-diagriGreen/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <span class="relative z-10">KN</span>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-10 md:gap-y-12">
+                <div class="group">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">
+                        KN
                     </div>
-                    <h6 class="text-sm font-bold text-diagriDark leading-tight group-hover:text-diagriGreen transition-colors">Kevin Nicola N.O.</h6>
-                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Pemasaran</p>
+                    <h6 class="text-xs md:text-sm font-bold text-diagriDark leading-tight">Kevin Nicola N.O.</h6>
+                    <p class="text-[8px] md:text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Pemasaran</p>
                 </div>
-
-                <!-- Ulangi struktur di atas untuk AR, AW, RD, MR, AY -->
                 <div class="group">
-                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">AR</div>
-                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Arjuna Rafif S.A.</h6>
-                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Keuangan</p>
-                </div>
-
-                <div class="group">
-                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">AW</div>
-                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Aryo Winata</h6>
-                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. SDM (HRD)</p>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">
+                        AR
+                    </div>
+                    <h6 class="text-xs md:text-sm font-bold text-diagriDark leading-tight">Arjuna Rafif S.A.</h6>
+                    <p class="text-[8px] md:text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Keuangan</p>
                 </div>
 
                 <div class="group">
-                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">RD</div>
-                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Rifqy Dimas P.</h6>
-                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Operasional</p>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">
+                        AW
+                    </div>
+                    <h6 class="text-xs md:text-sm font-bold text-diagriDark leading-tight">Aryo Winata</h6>
+                    <p class="text-[8px] md:text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. SDM (HRD)</p>
                 </div>
 
                 <div class="group">
-                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">MR</div>
-                    <h6 class="text-sm font-bold text-diagriDark leading-tight">M. Rizieq Reyvito</h6>
-                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Teknologi (CTO)</p>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">
+                        RD
+                    </div>
+                    <h6 class="text-xs md:text-sm font-bold text-diagriDark leading-tight">Rifqy Dimas P.</h6>
+                    <p class="text-[8px] md:text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Operasional</p>
                 </div>
 
                 <div class="group">
-                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">AY</div>
-                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Alfemmas Yulianto</h6>
-                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Logistik</p>
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">
+                        MR
+                    </div>
+                    <h6 class="text-xs md:text-sm font-bold text-diagriDark leading-tight">M. Rizieq Reyvito</h6>
+                    <p class="text-[8px] md:text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Teknologi (CTO)</p>
+                </div>
+
+                <div class="group">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">
+                        AY
+                    </div>
+                    <h6 class="text-xs md:text-sm font-bold text-diagriDark leading-tight">Alfemmas Yulianto</h6>
+                    <p class="text-[8px] md:text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Logistik</p>
                 </div>
             </div>
         </div>
@@ -445,6 +425,30 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Fungsi buka/tutup menu
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+            // Ganti ikon bars ke times (X) saat terbuka
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Tutup menu otomatis kalau salah satu link diklik
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+            });
+        });
+    </script>
 
 </body>
 </html>
