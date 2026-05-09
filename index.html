@@ -50,41 +50,62 @@
         </div>
     </nav>
 
-        <!-- Section Logo (Identitas Utama) -->
-    <section class="pt-36 pb-20 bg-white border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <!-- Container Logo - Ukuran Diperbesar -->
-            <div class="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 mb-16">
+    <!-- Section Logo (Identitas Utama) - Updated Graphic Elements -->
+    <section class="snap-start h-screen flex items-center bg-white relative overflow-hidden">
+        
+        <!-- 1. Objek Grafis Atas Kiri: Geometris Modern (Bukan Daun) -->
+        <div class="absolute -top-20 -left-20 w-80 h-80 bg-diagriGreen/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-10 left-10 opacity-20 pointer-events-none">
+            <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Kotak Gold 1 (Tumpang Tindih) -->
+                <rect x="70" y="70" width="50" height="50" rx="4" stroke="#C5A059" stroke-width="2" />
+                <!-- Kotak Gold 2 (Tumpang Tindih lebih kecil) -->
+                <rect x="90" y="90" width="50" height="50" rx="4" stroke="#C5A059" stroke-width="2" opacity="0.6" />
+            </svg>
+        </div>
+
+        <!-- 2. Objek Grafis Kanan Bawah: Mentok ke Kanan (Aksen Emas) -->
+        <div class="absolute -bottom-32 -right-10 w-96 h-96 bg-diagriGold/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-0 opacity-40 pointer-events-none">
+            <svg width="300" height="150" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M300 150L0 150C100 100 200 50 300 0V150Z" fill="#C5A059" fill-opacity="0.1"/>
+                <path d="M300 150L100 150C150 120 250 80 300 40V150Z" fill="#2D5A27" fill-opacity="0.05"/>
+            </svg>
+        </div>
+
+        <!-- 3. Grid Halus Tetap Dipertahankan untuk Tekstur -->
+        <div class="absolute inset-0 opacity-[0.02] pointer-events-none" 
+            style="background-image: radial-gradient(#2D5A27 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+            <!-- Container Logo Tanpa Border -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 mb-16">
                 
-                <!-- Logo Perusahaan (Kiri) -->
-                <div class="flex flex-col items-center">
-                    <!-- Ukuran h-48 w-48 (sekitar 192px) untuk tampilan lebih besar -->
-                    <div class="h-48 w-48 md:h-56 md:w-56 flex items-center justify-center">
-                        <img src="logopt.png" class="max-h-full max-w-full object-contain transform hover:scale-105 transition duration-500" alt="Logo PT DIAGRI">
+                <!-- Logo Perusahaan -->
+                <div class="flex flex-col items-center group">
+                    <div class="h-48 w-48 md:h-56 md:w-56 flex items-center justify-center transform hover:scale-110 transition duration-500">
+                        <img src="logopt.png" class="max-h-full max-w-full object-contain" alt="Logo PT DIAGRI">
                     </div>
-                    <p class="mt-6 text-[12px] font-black text-diagriDark tracking-[0.4em] uppercase">Corporate Identity</p>
+                    <p class="mt-8 text-[11px] font-black text-diagriDark tracking-[0.5em] uppercase">Corporate Identity</p>
                 </div>
                 
-                <!-- Garis Pemisah Super Bold -->
-                <div class="hidden md:block h-40 w-[4px] bg-diagriDark/20 rounded-full"></div>
-                <!-- Garis Pemisah Mobile -->
-                <div class="md:hidden w-32 h-[4px] bg-diagriDark/20 rounded-full my-8"></div>
+                <!-- Divider Tegas & Solid -->
+                <div class="w-[2px] h-24 md:h-40 bg-diagriDark/20 rounded-full my-6 md:my-0"></div>
 
-                <!-- Logo E-Commerce (Kanan) -->
-                <div class="flex flex-col items-center">
-                    <!-- Ukuran disamakan agar simetris -->
-                    <div class="h-48 w-48 md:h-56 md:w-56 flex items-center justify-center">
-                        <img src="logoecommerce.png" class="max-h-full max-w-full object-contain transform hover:scale-105 transition duration-500" alt="Logo E-Commerce">
+                <!-- Logo E-Commerce -->
+                <div class="flex flex-col items-center group">
+                    <div class="h-48 w-48 md:h-56 md:w-56 flex items-center justify-center transform hover:scale-110 transition duration-500">
+                        <img src="logoecommerce.png" class="max-h-full max-w-full object-contain" alt="Logo E-Commerce">
                     </div>
-                    <p class="mt-6 text-[12px] font-black text-diagriGold tracking-[0.4em] uppercase">Platform Digital</p>
+                    <p class="mt-8 text-[11px] font-black text-diagriGold tracking-[0.5em] uppercase">Platform Digital</p>
                 </div>
             </div>
             
-            <!-- Slogan Pure Tulisan - Ukuran Diperbesar -->
-            <div class="mt-10">
-                <h2 class="text-3xl md:text-5xl font-extrabold italic tracking-tighter leading-tight">
+            <!-- Slogan -->
+            <div class="mt-12">
+                <h2 class="text-2xl md:text-5xl font-extrabold italic tracking-tighter leading-tight drop-shadow-sm">
                     <span class="text-diagriDark">"Distribusi Cerdas,</span>
-                    <br class="md:hidden"> <!-- Pindah baris di mobile supaya rapi -->
                     <span class="text-diagriGold">Tanpa Batas Pasar"</span>
                 </h2>
             </div>
@@ -107,19 +128,25 @@
             </div>
 
             <!-- Kolom Foto: Gaya Modern Box -->
-            <div class="md:w-1/2 flex justify-center">
-                <div class="relative group">
-                    <!-- Dekorasi Aksen di Belakang Foto -->
-                    <div class="absolute -top-4 -right-4 w-full h-full border-2 border-diagriGold rounded-3xl z-0 group-hover:top-0 group-hover:right-0 transition-all duration-500"></div>
-                    
-                    <!-- Container Foto -->
-                    <div class="relative z-10 overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-4 border-white">
-                        <img src="ilustrasi1.png" 
-                            class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-700" 
-                            alt="Ilustrasi Teknologi Agrikultur">
-                    </div>
+<!-- Kolom Foto: Gaya Modern Box (Size Updated) -->
+        <div class="md:w-2/5 flex justify-center items-center">
+            <!-- Ukuran container diperkecil dengan max-w-md agar tidak kegedean -->
+            <div class="relative group max-w-sm md:max-w-md w-full">
+                
+                <!-- Dekorasi Aksen di Belakang Foto (Sekarang lebih terlihat) -->
+                <div class="absolute -top-6 -right-6 w-full h-full border-2 border-diagriGold rounded-3xl z-0 group-hover:top-0 group-hover:right-0 transition-all duration-500"></div>
+                
+                <!-- Container Foto -->
+                <div class="relative z-10 overflow-hidden rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-4 border-white">
+                    <img src="ilustrasi1.png" 
+                        class="w-full h-auto max-h-[450px] object-cover transform group-hover:scale-110 transition duration-700" 
+                        alt="Ilustrasi Teknologi Agrikultur">
                 </div>
+                
+                <!-- Aksen tambahan: Dot dekorasi biar makin pro -->
+                <div class="absolute -bottom-4 -left-4 w-20 h-20 bg-diagriGreen/10 rounded-full blur-xl -z-10"></div>
             </div>
+        </div>
 
         </div>
     </section>
@@ -131,7 +158,7 @@
             <!-- Kolom Teks -->
             <div class="md:w-1/2">
                 <h3 class="text-diagriGold font-bold tracking-widest uppercase text-sm mb-4">Platform Kami</h3>
-                <h2 class="text-3xl font-bold mb-6">Efisiensi Distribusi Digital</h2>
+                <h2 class="text-3xl font-bold mb-6">DIAGRI E-Commerce</h2>
                 <p class="text-gray-300 text-lg leading-relaxed mb-8 text-justify">
                     Melalui integrasi e-commerce, kami memangkas rantai distribusi yang tidak efisien. Platform kami memungkinkan petani untuk memasarkan produknya secara luas tanpa hambatan geografis, sementara konsumen mendapatkan kepastian kualitas dan harga yang adil.
                 </p>
@@ -192,87 +219,142 @@
     </section>
 
     <!-- Section 4: Layanan & Keunggulan -->
-    <section id="layanan" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-diagriGold mb-16 uppercase tracking-widest">Layanan & Keunggulan</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
-                    <span class="text-4xl">🌾</span>
-                    <h4 class="font-bold text-diagriDark my-4">Akses Pasar Langsung</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Menghubungkan petani langsung dengan konsumen, meningkatkan margin keuntungan.</p>
+    <section id="layanan" class="snap-start h-screen flex items-center py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Elemen Dekorasi Latar Belakang -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-diagriGreen/5 rounded-full -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-diagriGold/5 rounded-full -ml-32 -mb-32"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <h2 class="text-3xl font-bold text-center text-diagriGold mb-12 uppercase tracking-widest">Layanan & Keunggulan</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+                <!-- Card 1 -->
+                <div class="group bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-diagriGreen/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-diagriGreen transition duration-300">
+                        <i class="fa-solid fa-store text-2xl text-diagriGreen group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-diagriDark mb-3 text-sm md:text-base">Akses Pasar Langsung</h4>
+                    <p class="text-[10px] md:text-xs text-gray-500 leading-relaxed">Menghubungkan petani langsung dengan konsumen, meningkatkan margin keuntungan.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
-                    <span class="text-4xl">📦</span>
-                    <h4 class="font-bold text-diagriDark my-4">Distribusi Efisien</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Sistem logistik terintegrasi untuk pengiriman produk dalam kondisi tetap segar.</p>
+
+                <!-- Card 2 -->
+                <div class="group bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-diagriGreen/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-diagriGreen transition duration-300">
+                        <i class="fa-solid fa-truck-fast text-2xl text-diagriGreen group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-diagriDark mb-3 text-sm md:text-base">Distribusi Efisien</h4>
+                    <p class="text-[10px] md:text-xs text-gray-500 leading-relaxed">Sistem logistik terintegrasi untuk pengiriman produk dalam kondisi tetap segar.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
-                    <span class="text-4xl">💰</span>
-                    <h4 class="font-bold text-diagriDark my-4">Harga Transparan</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Platform digital dengan informasi harga pasar real-time yang jujur bagi semua pihak.</p>
+
+                <!-- Card 3 -->
+                <div class="group bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-diagriGreen/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-diagriGreen transition duration-300">
+                        <i class="fa-solid fa-hand-holding-dollar text-2xl text-diagriGreen group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-diagriDark mb-3 text-sm md:text-base">Harga Transparan</h4>
+                    <p class="text-[10px] md:text-xs text-gray-500 leading-relaxed">Platform digital dengan informasi harga pasar real-time yang jujur bagi semua pihak.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
-                    <span class="text-4xl">🛒</span>
-                    <h4 class="font-bold text-diagriDark my-4">E-Commerce Terintegrasi</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Belanja produk pertanian lokal dengan mudah melalui platform digital terpadu.</p>
+
+                <!-- Card 4 -->
+                <div class="group bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-diagriGreen/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-diagriGreen transition duration-300">
+                        <i class="fa-solid fa-cart-shopping text-2xl text-diagriGreen group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-diagriDark mb-3 text-sm md:text-base">E-Commerce Terintegrasi</h4>
+                    <p class="text-[10px] md:text-xs text-gray-500 leading-relaxed">Belanja produk pertanian lokal dengan mudah melalui platform digital terpadu.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
-                    <span class="text-4xl">📊</span>
-                    <h4 class="font-bold text-diagriDark my-4">Analitik & Wawasan</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Membantu pengambilan keputusan bisnis yang cerdas berdasarkan tren pasar.</p>
+
+                <!-- Card 5 -->
+                <div class="group bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-diagriGreen/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-diagriGreen transition duration-300">
+                        <i class="fa-solid fa-chart-line text-2xl text-diagriGreen group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-diagriDark mb-3 text-sm md:text-base">Analitik & Wawasan</h4>
+                    <p class="text-[10px] md:text-xs text-gray-500 leading-relaxed">Membantu pengambilan keputusan bisnis yang cerdas berdasarkan tren pasar.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-md text-center hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen">
-                    <span class="text-4xl">🌱</span>
-                    <h4 class="font-bold text-diagriDark my-4">Praktik Berkelanjutan</h4>
-                    <p class="text-xs text-gray-500 leading-relaxed">Fokus pada keberlanjutan sektor pangan dan modernisasi pertanian ramah lingkungan.</p>
+
+                <!-- Card 6 -->
+                <div class="group bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border-b-4 border-diagriGreen flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-diagriGreen/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-diagriGreen transition duration-300">
+                        <i class="fa-solid fa-seedling text-2xl text-diagriGreen group-hover:text-white"></i>
+                    </div>
+                    <h4 class="font-bold text-diagriDark mb-3 text-sm md:text-base">Praktik Berkelanjutan</h4>
+                    <p class="text-[10px] md:text-xs text-gray-500 leading-relaxed">Fokus pada keberlanjutan sektor pangan dan modernisasi pertanian ramah lingkungan.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section 5: Struktur Organisasi (Hierarki Visual) -->
-    <section id="struktur" class="py-24 px-6 bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-diagriGold mb-20 uppercase tracking-widest">Struktur Organisasi</h2>
+    <!-- Section 5: Struktur Organisasi (Executive Edition) -->
+    <section id="struktur" class="snap-start h-screen flex items-center py-24 px-6 bg-white relative overflow-hidden">
+        
+        <!-- Background Aksen Mewah -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-diagriGold/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl font-bold text-diagriGold mb-20 uppercase tracking-[0.3em]">Struktur Organisasi</h2>
             
-            <div class="flex justify-center mb-20 relative">
-                <div class="w-64 z-10">
-                    <div class="w-24 h-24 bg-diagriDark text-white rounded-full mx-auto flex items-center justify-center text-3xl font-bold mb-4 shadow-xl border-4 border-white">AR</div>
-                    <h5 class="text-xl font-bold text-diagriDark">Abdul Rossyd L</h5>
-                    <p class="text-diagriGold font-bold text-xs uppercase tracking-widest">CEO</p>
+            <!-- CEO Section dengan Glow Emas -->
+            <div class="flex justify-center mb-24 relative">
+
+                <div class="w-64 group">
+                    <div class="relative w-28 h-28 mx-auto mb-6">
+                        <!-- Outer Ring Animation -->
+                        <div class="absolute inset-0 rounded-full border-2 border-diagriGold scale-110 opacity-20 group-hover:scale-125 group-hover:opacity-0 transition duration-700"></div>
+                        
+                        <div class="w-full h-full bg-diagriDark text-diagriGold rounded-full flex items-center justify-center text-3xl font-serif italic shadow-[0_15px_35px_rgba(26,46,24,0.3)] border-2 border-diagriGold relative z-10 transition-transform duration-500 group-hover:scale-105">
+                            AR
+                        </div>
+                    </div>
+                    <h5 class="text-2xl font-bold text-diagriDark tracking-tight">Abdul Rossyd L</h5>
+                    <div class="inline-block px-4 py-1 mt-2 border-y border-diagriGold/30">
+                        <p class="text-diagriGold font-black text-xs uppercase tracking-[0.2em]">Chief Executive Officer</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                <div class="group">
-                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">KN</div>
-                    <h6 class="text-sm font-bold text-diagriDark leading-tight">Kevin Nicola N.O.</h6>
-                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Pemasaran</p>
+            <!-- Directors Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-12">
+                <!-- Card Template -->
+                <div class="group relative">
+                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500 overflow-hidden relative">
+                        <!-- Subtle Glass Effect Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-diagriGreen/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <span class="relative z-10">KN</span>
+                    </div>
+                    <h6 class="text-sm font-bold text-diagriDark leading-tight group-hover:text-diagriGreen transition-colors">Kevin Nicola N.O.</h6>
+                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Pemasaran</p>
                 </div>
+
+                <!-- Ulangi struktur di atas untuk AR, AW, RD, MR, AY -->
                 <div class="group">
-                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">AR</div>
+                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">AR</div>
                     <h6 class="text-sm font-bold text-diagriDark leading-tight">Arjuna Rafif S.A.</h6>
-                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Keuangan</p>
+                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Keuangan</p>
                 </div>
+
                 <div class="group">
-                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">AW</div>
+                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">AW</div>
                     <h6 class="text-sm font-bold text-diagriDark leading-tight">Aryo Winata</h6>
-                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. SDM (HRD)</p>
+                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. SDM (HRD)</p>
                 </div>
+
                 <div class="group">
-                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">RD</div>
+                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">RD</div>
                     <h6 class="text-sm font-bold text-diagriDark leading-tight">Rifqy Dimas P.</h6>
-                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Operasional</p>
+                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Operasional</p>
                 </div>
+
                 <div class="group">
-                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">MR</div>
+                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">MR</div>
                     <h6 class="text-sm font-bold text-diagriDark leading-tight">M. Rizieq Reyvito</h6>
-                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Teknologi (CTO)</p>
+                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Teknologi (CTO)</p>
                 </div>
+
                 <div class="group">
-                    <div class="w-16 h-16 bg-diagriGreen text-white rounded-full mx-auto flex items-center justify-center font-bold mb-3 shadow-md group-hover:bg-diagriGold transition duration-300">AY</div>
+                    <div class="w-20 h-20 bg-white text-diagriDark rounded-full mx-auto flex items-center justify-center font-bold mb-4 shadow-lg border border-gray-100 group-hover:border-diagriGold group-hover:text-diagriGold transition-all duration-500">AY</div>
                     <h6 class="text-sm font-bold text-diagriDark leading-tight">Alfemmas Yulianto</h6>
-                    <p class="text-[10px] text-gray-500 mt-2 uppercase">Dir. Logistik & Distribusi</p>
+                    <p class="text-[9px] text-diagriGold font-bold mt-2 uppercase tracking-widest opacity-80">Dir. Logistik</p>
                 </div>
             </div>
         </div>
@@ -294,27 +376,46 @@
                     </p>
                 </div>
 
-                <!-- Kolom 2: Alamat -->
+                <!-- Kolom 2: Alamat + G-Maps -->
                 <div class="md:w-1/4 md:pl-6 space-y-4">
                     <h4 class="text-diagriGold font-bold uppercase tracking-widest text-sm">Alamat Kantor</h4>
-                    <p class="text-sm text-gray-300">
-                        Bakrie Tower Lantai 12, Rasuna Epicentrum,<br>
-                        Jl. H.R. Rasuna Said, Jakarta Selatan, 12940
-                    </p>
+                    <div class="space-y-4">
+                        <p class="text-sm text-gray-300">
+                            Bakrie Tower Lantai 12, Rasuna Epicentrum,<br>
+                            Jl. H.R. Rasuna Said, Jakarta Selatan, 12940
+                        </p>
+                        
+                        <!-- Google Maps Embed: Kecil & Elegan -->
+                        <div class="w-full h-32 rounded-xl overflow-hidden border border-gray-700 shadow-lg group">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.353347953257!2d106.8335962!3d-6.2163821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3fb7c784381%3A0xc3c518df4f5c9e2b!2sBakrie%20Tower!5e0!3m2!1sid!2sid!4v1715260000000!5m2!1sid!2sid" 
+                                class="w-full h-full grayscale-[0.5] contrast-[1.2] group-hover:grayscale-0 transition-all duration-700" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Kolom 3: Kontak -->
                 <div class="md:w-1/5 md:pl-4 space-y-4">
                     <h4 class="text-diagriGold font-bold uppercase tracking-widest text-sm">Kontak</h4>
-                    <div class="space-y-2">
-                        <p class="text-sm text-gray-300 flex items-center gap-2">
-                            <i class="fas fa-envelope text-diagriGold"></i>
+                    <div class="flex flex-col space-y-3">
+                        <!-- Email Link -->
+                        <a href="mailto:diagri.hub@ptdiagri.co.id" 
+                        class="text-sm text-gray-300 flex items-center gap-2 hover:text-diagriGold transition-colors duration-300 group">
+                            <i class="fas fa-envelope text-diagriGold group-hover:scale-110 transition-transform"></i>
                             diagri.hub@ptdiagri.co.id
-                        </p>
-                        <p class="text-sm text-gray-300 flex items-center gap-2">
-                            <i class="fas fa-phone-alt text-diagriGold"></i>
+                        </a>
+                        
+                        <!-- Phone Link -->
+                        <a href="tel:02113130506" 
+                        class="text-sm text-gray-300 flex items-center gap-2 hover:text-diagriGold transition-colors duration-300 group">
+                            <i class="fas fa-phone-alt text-diagriGold group-hover:scale-110 transition-transform"></i>
                             021 13130506
-                        </p>
+                        </a>
                     </div>
                 </div>
 
